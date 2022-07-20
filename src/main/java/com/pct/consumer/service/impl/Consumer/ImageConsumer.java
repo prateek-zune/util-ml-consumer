@@ -36,7 +36,6 @@ public class ImageConsumer {
 
 	@Autowired
 	private RestHighLevelClient client;
-	
 
 	@KafkaListener(topics = "image-ml")
 	public void getCargoCameraImageJson(@Payload String imageJson, @Headers MessageHeaders messageHeaders) {
